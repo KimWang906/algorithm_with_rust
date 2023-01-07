@@ -17,7 +17,6 @@ fn input() -> i32 {
 fn main() {
     let value = input();
     let data = (1..value + 1).filter(|x| value != *x && value % x == 0).collect::<Vec<i32>>();
-    // [1, 2, 4, 5, 10]
     let data_cp = data.clone();
     let sum: i32 = data_cp.into_iter().sum();
     let res = (0..=(data.len() - 1) as i32).for_each(|x| {
